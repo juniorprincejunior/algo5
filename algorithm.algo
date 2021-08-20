@@ -1,0 +1,52 @@
+ALGORITHM tab
+
+VAR
+    tab: CHAR := [];
+    i:=0 INTEGER;
+    comp:=0 : INTEGER;
+    comp1 := 0: INTEGER;
+    comp2 :=0: INTEGER;
+
+BEGIN
+   DO{
+        READ(tab[i]);
+   }
+   WHILE(tab[i] != ".")
+
+   FOR i FROM 0 TO tab.lengh STEP 1  DO{
+       comp++;
+   }
+   END_FOR
+   
+   WRITE("la longueur de la phrase est " + comp );
+
+    FOR i FROM 0 TO tab.lengh STEP 1  DO{
+       if(tab[i]==" ")THEN{
+           comp1++;
+       }
+       END_IF
+   }
+   WRITE("le nombre de mot est " + comp1);
+   
+     FOR i FROM 0 TO tab.lengh 10 STEP step  DO{
+       SWITCH(tab[i]){
+           case a : comp2++
+           case A : comp2++; break;
+           case e : comp2++
+           case E : comp2++; break;
+           case i : comp2++
+           case I : comp2++; break;
+           case o : comp2++
+           case O : comp2++; break;
+           case u : comp2++
+           case U : comp2++; break;
+           case y : comp2++
+           case V : comp2++; break;
+
+       }
+       END_SWITCH
+   }
+   END_FOR
+    WRITE("le nombre de voyelle est " + comp2);
+
+   END
